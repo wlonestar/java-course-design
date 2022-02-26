@@ -1,4 +1,4 @@
-package util;
+package com.wjl.util;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,9 +1,11 @@
-import entity.Message;
-import service.MessageService;
-import service.MessageServiceImpl;
-import util.Constants;
-import util.DateUtil;
-import util.LogUtil;
+package com.wjl;
+
+import com.wjl.entity.Message;
+import com.wjl.service.MessageService;
+import com.wjl.service.MessageServiceImpl;
+import com.wjl.util.Constants;
+import com.wjl.util.DateUtil;
+import com.wjl.util.LogUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,7 +38,7 @@ public class Server {
     ///////////////////////////////////////////////////////////////////////////
 
     // 建立 socket 通信的用户名，不唯一，注销后用户名即去除
-    public static Set<String> names = new HashSet<>();
+    public static final Set<String> names = new HashSet<>();
     // 对每一个建立 socket 通信的用户分配信息输出
     public static Set<PrintWriter> writers = new HashSet<>();
     // 线程连接数
@@ -76,7 +78,7 @@ public class Server {
      */
     private static class Handler implements Runnable {
         private String name;                     // 用户名
-        private Socket socket;                   // socket 实例
+        private final Socket socket;                   // socket 实例
         private Scanner in;                      // 输入
         private PrintWriter out;                 // 输出
 

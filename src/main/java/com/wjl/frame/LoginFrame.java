@@ -1,12 +1,12 @@
-package frame;
+package com.wjl.frame;
 
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
-import entity.User;
-import service.UserService;
-import service.UserServiceImpl;
-import util.Constants;
-import util.SwingUtil;
+import com.wjl.entity.User;
+import com.wjl.service.UserService;
+import com.wjl.service.UserServiceImpl;
+import com.wjl.util.Constants;
+import com.wjl.util.SwingUtil;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -149,118 +149,28 @@ public class LoginFrame extends JFrame {
         }
     }
 
-    /**
-     * 清空所有输入框中的内容
-     */
-    public void clearAllInput() {
-        username.setText("");
-        usernameAlert.setText("");
-        password.setText("");
-        passwordAlert.setText("");
-    }
-
     public JButton getLoginButton() {
         return loginButton;
-    }
-
-    public void setLoginButton(JButton loginButton) {
-        this.loginButton = loginButton;
     }
 
     public JButton getRegisterButton() {
         return registerButton;
     }
 
-    public void setRegisterButton(JButton registerButton) {
-        this.registerButton = registerButton;
-    }
-
     public JTextField getUsername() {
         return username;
-    }
-
-    public void setUsername(JTextField username) {
-        this.username = username;
     }
 
     public JPasswordField getPassword() {
         return password;
     }
 
-    public void setPassword(JPasswordField password) {
-        this.password = password;
-    }
-
-    public JLabel getTitleLabel() {
-        return titleLabel;
-    }
-
-    public void setTitleLabel(JLabel titleLabel) {
-        this.titleLabel = titleLabel;
-    }
-
     public JPanel getPane() {
         return pane;
     }
 
-    public void setPane(JPanel pane) {
-        this.pane = pane;
-    }
-
-    public JPanel getInputPane() {
-        return inputPane;
-    }
-
-    public void setInputPane(JPanel inputPane) {
-        this.inputPane = inputPane;
-    }
-
-    public JLabel getUsernameLabel() {
-        return usernameLabel;
-    }
-
-    public void setUsernameLabel(JLabel usernameLabel) {
-        this.usernameLabel = usernameLabel;
-    }
-
-    public JLabel getPasswordLabel() {
-        return passwordLabel;
-    }
-
-    public void setPasswordLabel(JLabel passwordLabel) {
-        this.passwordLabel = passwordLabel;
-    }
-
-    public JLabel getUsernameAlert() {
-        return usernameAlert;
-    }
-
-    public void setUsernameAlert(JLabel usernameAlert) {
-        this.usernameAlert = usernameAlert;
-    }
-
     public JLabel getPasswordAlert() {
         return passwordAlert;
-    }
-
-    public void setPasswordAlert(JLabel passwordAlert) {
-        this.passwordAlert = passwordAlert;
-    }
-
-    public JPanel getTitlePane() {
-        return titlePane;
-    }
-
-    public void setTitlePane(JPanel titlePane) {
-        this.titlePane = titlePane;
-    }
-
-    public JPanel getButtonPane() {
-        return buttonPane;
-    }
-
-    public void setButtonPane(JPanel buttonPane) {
-        this.buttonPane = buttonPane;
     }
 
 }

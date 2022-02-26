@@ -1,6 +1,6 @@
-package service;
+package com.wjl.service;
 
-import entity.Message;
+import com.wjl.entity.Message;
 
 import java.util.List;
 
@@ -21,14 +21,6 @@ public interface MessageService {
      * @return list
      */
     List<Message> findAll();
-
-    /**
-     * 通过用户名查找消息
-     *
-     * @param username username
-     * @return list
-     */
-    List<Message> findByUsername(String username);
 
     /**
      * 从文件中读取所有消息对象

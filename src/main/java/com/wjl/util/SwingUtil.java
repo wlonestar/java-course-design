@@ -1,4 +1,4 @@
-package util;
+package com.wjl.util;
 
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;

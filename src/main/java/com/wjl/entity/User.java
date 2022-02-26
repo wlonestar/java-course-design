@@ -1,4 +1,4 @@
-package entity;
+package com.wjl.entity;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public class User implements Serializable {
      *
      * <p>不低于6位且不多于20位</p>
      */
-    private String password;
+    private final String password;
 
     /**
      * <h3>性别</h3>
@@ -35,17 +35,14 @@ public class User implements Serializable {
      * <p>男: true</p>
      * <p>女: false</p>
      */
-    private boolean gender;
+    private final boolean gender;
 
     /**
      * <h3>年龄</h3>
      *
      * <p>年龄不能大于100岁</p>
      */
-    private Integer age;
-
-    public User() {
-    }
+    private final Integer age;
 
     public User(String username, String password, boolean gender, Integer age) {
         this.username = username;
@@ -64,26 +61,6 @@ public class User implements Serializable {
 
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public boolean isGender() {
-        return gender;
-    }
-
-    public void setGender(boolean gender) {
-        this.gender = gender;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package util;
+package com.wjl.util;
 
 import java.util.Base64;
 
@@ -21,16 +21,6 @@ public class Base64Util {
      */
     public static String encrypt(String key) {
         return Base64.getEncoder().encodeToString(key.getBytes());
-    }
-
-    /**
-     * 解密方法
-     *
-     * @param key key
-     * @return string
-     */
-    public static String decrypt(String key) {
-        return new String(Base64.getDecoder().decode(key));
     }
 
 }

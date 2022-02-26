@@ -1,4 +1,4 @@
-package entity;
+package com.wjl.entity;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -28,17 +28,14 @@ public class Message implements Serializable {
      *
      * <p>记录下消息发送时间，以 {@code 'yyyy-MM-dd'T'HH:mm:ss'} 格式存储到字符串中</p>
      */
-    private String time;
+    private final String time;
 
     /**
      * <h3>消息内容</h3>
      *
      * <p>记录消息内容，消息内容不能为空或全为空格</p>
      */
-    private String content;
-
-    public Message() {
-    }
+    private final String content;
 
     public Message(String username, String time, String content) {
         this.username = username;
@@ -58,16 +55,8 @@ public class Message implements Serializable {
         return time;
     }
 
-    public void setTime(String time) {
-        this.time = time;
-    }
-
     public String getContent() {
         return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 
     @Override

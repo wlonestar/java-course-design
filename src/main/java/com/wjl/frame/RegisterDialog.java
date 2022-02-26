@@ -1,8 +1,8 @@
-package frame;
+package com.wjl.frame;
 
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
-import util.SwingUtil;
+import com.wjl.util.SwingUtil;
 
 import javax.swing.*;
 import java.awt.*;
@@ -53,14 +53,6 @@ public class RegisterDialog extends JDialog {
 
     private void onOK() {
         dispose();
-    }
-
-    public JPanel getPane() {
-        return pane;
-    }
-
-    public void setPane(JPanel pane) {
-        this.pane = pane;
     }
 
 }

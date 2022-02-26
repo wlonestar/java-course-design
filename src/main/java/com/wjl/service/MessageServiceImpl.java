@@ -1,7 +1,7 @@
-package service;
+package com.wjl.service;
 
-import entity.Message;
-import util.Constants;
+import com.wjl.entity.Message;
+import com.wjl.util.Constants;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -31,24 +31,6 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public List<Message> findAll() {
         return read();
-    }
-
-    /**
-     * 通过用户名查找消息
-     *
-     * @param username username
-     * @return list
-     */
-    @Override
-    public List<Message> findByUsername(String username) {
-        List<Message> list = read();
-        List<Message> messages = new ArrayList<>();
-        for (Message message : list) {
-            if (message.getUsername().equals(username)) {
-                messages.add(message);
-            }
-        }
-        return messages;
     }
 
     /**

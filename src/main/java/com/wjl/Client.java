@@ -1,14 +1,16 @@
-import entity.Message;
-import entity.User;
-import frame.LoginFrame;
-import frame.MainFrame;
-import frame.RegisterDialog;
-import frame.RegisterFrame;
-import service.MessageService;
-import service.MessageServiceImpl;
-import service.UserService;
-import service.UserServiceImpl;
-import util.*;
+package com.wjl;
+
+import com.wjl.entity.Message;
+import com.wjl.entity.User;
+import com.wjl.frame.LoginFrame;
+import com.wjl.frame.MainFrame;
+import com.wjl.frame.RegisterDialog;
+import com.wjl.frame.RegisterFrame;
+import com.wjl.service.MessageService;
+import com.wjl.service.MessageServiceImpl;
+import com.wjl.service.UserService;
+import com.wjl.service.UserServiceImpl;
+import com.wjl.util.*;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -50,7 +52,7 @@ public class Client {
 
     public List<String> users;                   // 从文件读取所有用户名
     public List<Message> messages;               // 从文件读取所以消息
-    public String serverAddr;                    // 服务器地址
+    public String serverAdder;                    // 服务器地址
     public static Scanner in;                    // 输入
     public static PrintWriter out;               // 输出
     public String username;                      // 用户名
@@ -83,10 +85,10 @@ public class Client {
      *
      * <p>初始化用户名和消息列表</p>
      *
-     * @param serverAddr serverAddress
+     * @param serverAdder serverAddress
      */
-    public Client(String serverAddr) {
-        this.serverAddr = serverAddr;
+    public Client(String serverAdder) {
+        this.serverAdder = serverAdder;
         this.users = userService.findAllUsernames();
         this.messages = messageService.findAll();
     }
@@ -176,9 +178,7 @@ public class Client {
                 client.registerFrame.dispose();
             });
             // 添加注册界面清空按钮侦听器
-            client.registerFrame.getClearButton().addActionListener(e3 -> {
-                client.registerFrame.clearAllInput();
-            });
+            client.registerFrame.getClearButton().addActionListener(e3 -> client.registerFrame.clearAllInput());
         });
         // 添加主界面加入群聊按钮侦听器
         client.mainFrame.getJoinButton().addActionListener(e -> {
@@ -240,7 +240,7 @@ public class Client {
      */
     private synchronized void run(String username) throws IOException {
         try {
-            var socket = new Socket(serverAddr, Constants.SERVER_PORT);
+            var socket = new Socket(serverAdder, Constants.SERVER_PORT);
             in = new Scanner(socket.getInputStream());
             out = new PrintWriter(socket.getOutputStream(), true);
             while (in.hasNextLine()) {
@@ -263,10 +263,6 @@ public class Client {
             mainFrame.setVisible(false);
             mainFrame.dispose();
         }
-    }
-
-    public String getUsername() {
-        return username;
     }
 
     public void setUsername(String username) {

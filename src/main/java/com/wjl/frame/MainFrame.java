@@ -1,10 +1,8 @@
-package frame;
+package com.wjl.frame;
 
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import service.UserService;
-import service.UserServiceImpl;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -22,9 +20,6 @@ import java.awt.*;
  * @version: v1.0
  */
 public class MainFrame extends JFrame {
-
-    // 手动注入用户类服务接口提供类
-    private final static UserService userService = new UserServiceImpl();
 
     private JPanel pane;                         // 主面板（包括侧边面板和聊天面板）
     ///////////////////////////////////////////////////////////////////////////
@@ -132,152 +127,32 @@ public class MainFrame extends JFrame {
         return pane;
     }
 
-    public void setPane(JPanel pane) {
-        this.pane = pane;
-    }
-
-    public JPanel getSidePane() {
-        return sidePane;
-    }
-
-    public void setSidePane(JPanel sidePane) {
-        this.sidePane = sidePane;
-    }
-
-    public JScrollPane getOnlinePane() {
-        return onlinePane;
-    }
-
-    public void setOnlinePane(JScrollPane onlinePane) {
-        this.onlinePane = onlinePane;
-    }
-
-    public JPanel getChatPane() {
-        return chatPane;
-    }
-
-    public void setChatPane(JPanel chatPane) {
-        this.chatPane = chatPane;
-    }
-
-    public JPanel getHeadPane() {
-        return headPane;
-    }
-
-    public void setHeadPane(JPanel headPane) {
-        this.headPane = headPane;
-    }
-
-    public JLabel getWindowTitle() {
-        return windowTitle;
-    }
-
-    public void setWindowTitle(JLabel windowTitle) {
-        this.windowTitle = windowTitle;
-    }
-
-    public JScrollPane getMessagePane() {
-        return messagePane;
-    }
-
-    public void setMessagePane(JScrollPane messagePane) {
-        this.messagePane = messagePane;
-    }
-
-    public JPanel getSendPane() {
-        return sendPane;
-    }
-
-    public void setSendPane(JPanel sendPane) {
-        this.sendPane = sendPane;
-    }
-
-    public JLabel getOnlineLabel() {
-        return onlineLabel;
-    }
-
-    public void setOnlineLabel(JLabel onlineLabel) {
-        this.onlineLabel = onlineLabel;
-    }
-
     public JTextPane getShowPane() {
         return showPane;
-    }
-
-    public void setShowPane(JTextPane showPane) {
-        this.showPane = showPane;
-    }
-
-    public JPanel getSidetitlePane() {
-        return sidetitlePane;
-    }
-
-    public void setSidetitlePane(JPanel sidetitlePane) {
-        this.sidetitlePane = sidetitlePane;
     }
 
     public JTextPane getUsersPane() {
         return usersPane;
     }
 
-    public void setUsersPane(JTextPane usersPane) {
-        this.usersPane = usersPane;
-    }
-
     public JButton getLogoutButton() {
         return logoutButton;
-    }
-
-    public void setLogoutButton(JButton logoutButton) {
-        this.logoutButton = logoutButton;
     }
 
     public JLabel getUsername() {
         return username;
     }
 
-    public void setUsername(JLabel username) {
-        this.username = username;
-    }
-
     public JButton getJoinButton() {
         return joinButton;
-    }
-
-    public void setJoinButton(JButton joinButton) {
-        this.joinButton = joinButton;
-    }
-
-    public JPanel getTitlePane() {
-        return titlePane;
-    }
-
-    public void setTitlePane(JPanel titlePane) {
-        this.titlePane = titlePane;
-    }
-
-    public JPanel getNamePane() {
-        return namePane;
-    }
-
-    public void setNamePane(JPanel namePane) {
-        this.namePane = namePane;
     }
 
     public JTextField getSendField() {
         return sendField;
     }
 
-    public void setSendField(JTextField sendField) {
-        this.sendField = sendField;
-    }
-
     public JLabel getSendAlert() {
         return sendAlert;
-    }
-
-    public void setSendAlert(JLabel sendAlert) {
-        this.sendAlert = sendAlert;
     }
 
 }

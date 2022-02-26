@@ -40,7 +40,7 @@
                             <addClasspath>true</addClasspath>
                             <useUniqueVersions>false</useUniqueVersions>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Server</mainClass>
+                            <mainClass>com.wjl.Server</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -53,7 +53,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Server</mainClass>
+                            <mainClass>com.wjl.Server</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

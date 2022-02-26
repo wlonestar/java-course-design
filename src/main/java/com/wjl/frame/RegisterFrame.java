@@ -1,11 +1,11 @@
-package frame;
+package com.wjl.frame;
 
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
-import service.UserService;
-import service.UserServiceImpl;
-import util.Constants;
-import util.SwingUtil;
+import com.wjl.service.UserService;
+import com.wjl.service.UserServiceImpl;
+import com.wjl.util.Constants;
+import com.wjl.util.SwingUtil;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -326,208 +326,32 @@ public class RegisterFrame extends JFrame {
         return pane;
     }
 
-    public void setPane(JPanel pane) {
-        this.pane = pane;
-    }
-
     public JTextField getUsername() {
         return username;
-    }
-
-    public void setUsername(JTextField username) {
-        this.username = username;
     }
 
     public JPasswordField getPassword() {
         return password;
     }
 
-    public void setPassword(JPasswordField password) {
-        this.password = password;
-    }
-
-    public JLabel getTitleLabel() {
-        return titleLabel;
-    }
-
-    public void setTitleLabel(JLabel titleLabel) {
-        this.titleLabel = titleLabel;
-    }
-
     public JTextField getAge() {
         return age;
-    }
-
-    public void setAge(JTextField age) {
-        this.age = age;
     }
 
     public JButton getBackButton() {
         return backButton;
     }
 
-    public void setBackButton(JButton backButton) {
-        this.backButton = backButton;
-    }
-
     public JButton getRegisterButton() {
         return registerButton;
-    }
-
-    public void setRegisterButton(JButton registerButton) {
-        this.registerButton = registerButton;
     }
 
     public JButton getClearButton() {
         return clearButton;
     }
 
-    public void setClearButton(JButton clearButton) {
-        this.clearButton = clearButton;
-    }
-
-    public JPanel getTitlePane() {
-        return titlePane;
-    }
-
-    public void setTitlePane(JPanel titlePane) {
-        this.titlePane = titlePane;
-    }
-
-    public JPasswordField getRepeatRassword() {
-        return repeatRassword;
-    }
-
-    public void setRepeatRassword(JPasswordField repeatRassword) {
-        this.repeatRassword = repeatRassword;
-    }
-
-    public JPanel getInputPane() {
-        return inputPane;
-    }
-
-    public void setInputPane(JPanel inputPane) {
-        this.inputPane = inputPane;
-    }
-
-    public JPanel getBackPane() {
-        return backPane;
-    }
-
-    public void setBackPane(JPanel backPane) {
-        this.backPane = backPane;
-    }
-
-    public JPanel getButtonPane() {
-        return buttonPane;
-    }
-
-    public void setButtonPane(JPanel buttonPane) {
-        this.buttonPane = buttonPane;
-    }
-
-    public JRadioButton getMaleButton() {
-        return maleButton;
-    }
-
-    public void setMaleButton(JRadioButton maleButton) {
-        this.maleButton = maleButton;
-    }
-
-    public JRadioButton getFemaleButton() {
-        return femaleButton;
-    }
-
-    public void setFemaleButton(JRadioButton femaleButton) {
-        this.femaleButton = femaleButton;
-    }
-
-    public JPanel getGenderPane() {
-        return genderPane;
-    }
-
-    public void setGenderPane(JPanel genderPane) {
-        this.genderPane = genderPane;
-    }
-
-    public JLabel getUsernameLabel() {
-        return usernameLabel;
-    }
-
-    public void setUsernameLabel(JLabel usernameLabel) {
-        this.usernameLabel = usernameLabel;
-    }
-
-    public JLabel getPasswordLabel() {
-        return passwordLabel;
-    }
-
-    public void setPasswordLabel(JLabel passwordLabel) {
-        this.passwordLabel = passwordLabel;
-    }
-
-    public JLabel getRepeatPasswordLabel() {
-        return repeatPasswordLabel;
-    }
-
-    public void setRepeatPasswordLabel(JLabel repeatPasswordLabel) {
-        this.repeatPasswordLabel = repeatPasswordLabel;
-    }
-
-    public JLabel getAgeLabel() {
-        return ageLabel;
-    }
-
-    public void setAgeLabel(JLabel ageLabel) {
-        this.ageLabel = ageLabel;
-    }
-
-    public JLabel getGenderLabel() {
-        return genderLabel;
-    }
-
-    public void setGenderLabel(JLabel genderLabel) {
-        this.genderLabel = genderLabel;
-    }
-
-    public JLabel getUsernameAlert() {
-        return usernameAlert;
-    }
-
-    public void setUsernameAlert(JLabel usernameAlert) {
-        this.usernameAlert = usernameAlert;
-    }
-
-    public JLabel getPasswordAlert() {
-        return passwordAlert;
-    }
-
-    public void setPasswordAlert(JLabel passwordAlert) {
-        this.passwordAlert = passwordAlert;
-    }
-
-    public JLabel getRepeatPasswordAlert() {
-        return repeatPasswordAlert;
-    }
-
-    public void setRepeatPasswordAlert(JLabel repeatPasswordAlert) {
-        this.repeatPasswordAlert = repeatPasswordAlert;
-    }
-
-    public JLabel getAgeAlert() {
-        return ageAlert;
-    }
-
-    public void setAgeAlert(JLabel ageAlert) {
-        this.ageAlert = ageAlert;
-    }
-
     public ButtonGroup getButtonGroup() {
         return buttonGroup;
-    }
-
-    public void setButtonGroup(ButtonGroup buttonGroup) {
-        this.buttonGroup = buttonGroup;
     }
 
 }

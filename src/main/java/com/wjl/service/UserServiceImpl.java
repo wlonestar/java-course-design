@@ -1,7 +1,7 @@
-package service;
+package com.wjl.service;
 
-import entity.User;
-import util.Constants;
+import com.wjl.entity.User;
+import com.wjl.util.Constants;
 
 import java.io.*;
 import java.util.*;

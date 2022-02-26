@@ -1,6 +1,6 @@
-package service;
+package com.wjl.service;
 
-import entity.User;
+import com.wjl.entity.User;
 
 import java.util.List;
 

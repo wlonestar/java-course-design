@@ -1,4 +1,4 @@
-package util;
+package com.wjl.util;
 
 /**
  * <h1>定义全局常量</h1>
